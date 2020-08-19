@@ -4,12 +4,21 @@
 
 let str = 
 `
-London | United Kingdom
-Chicago | United States
-Seattle | United States
-New York | United States
+London |   United Kingdom
+Dresden     |  Germany
+Chicago     | United States
+Seattle |    United States
+New York   |     United States
+   Paris    |     France
 `;
 
-var regex = /\s+\|\s+/my;
+// Let's set our initial pattern to look for any Whitespace surrounding the pipe delimiter
+var regex = /\s+\|\s+/gm;
 
-console.log(str=str.replaceAll(regex, '|'));
+// We use the String.replace() function to search for a pattern and replace it with something else
+console.log(str=str.replace(regex, '|'));
+
+// This looks much better, but we still have some random Whitespace at the beginning of the lines.
+
+var regex2 = /^\s+/gm;
+console.log(str.replace(regex2, ''));
