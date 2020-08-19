@@ -8,3 +8,6 @@ var sentence = 'Trevor, are you going to the store? trevor! Or is your name trav
 var re = /t\w{4,6}/ig;
 
 console.log(sentence.match(re));
+
+// Learning point: Even though we specified a regex starting with lower-case "t", it still matched all of the
+// words starting with upper-case "T" as well. That's because we added the 'i' option.
