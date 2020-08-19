@@ -5,7 +5,7 @@ const inputString = `
 Hello, my name is Trevor Sullivan. My credit card number is 9999888877776666 and the expiration date is 02/99.
 `;
 
-let regex = /(\d{13,19})/;
+let regex = /(\d{13,19}).*?(\d{1,2}\/\d{2})/;
 
 console.log(inputString.match(regex));
 
